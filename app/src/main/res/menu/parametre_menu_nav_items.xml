@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu   xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/yayinEviItem"
+        android:icon="@drawable/ic_format_list_numbered_24dp"
+        app:showAsAction="ifRoom"
+        android:title="@string/yayinEvleriItemLabel"/>
+
+    <item
+        android:id="@+id/sepet"
+        app:showAsAction="never"
+        android:title=""/>
+
+    <item
+        android:id="@+id/kitapTurItem"
+        android:icon="@drawable/ic_format_list_numbered_24dp"
+        app:showAsAction="ifRoom"
+        android:title="@string/kitapTurleriItemLabel"/>
+
+</menu>

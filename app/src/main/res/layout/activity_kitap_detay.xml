@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".KitapDetayActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <RelativeLayout
+                android:id="@+id/kitapDetayResimFrame"
+                android:layout_width="match_parent"
+                android:background="@drawable/boskitaplik"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/kitapDetayImageId"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/dotted_shape" />
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/detayScrollView"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/detayCardId"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/kitap_detay_card_shadow">
+
+                    <TextView
+                        android:id="@+id/kitapDetayAdTextId"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="TextView"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/siyah"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kitapDetayYazarAdTextId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/kitapDetayAdTextId"
+                        android:fontFamily="@font/actor"
+                        android:gravity="center_horizontal"
+                        android:text="TextView"
+                        android:textColor="@color/siyah"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/kitapDetayYayineviTextId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/kitapDetayYazarAdTextId"
+                        android:textColor="@color/siyah"
+                        android:gravity="center_horizontal"
+                        android:textSize="14sp"
+                        android:text="TextView"/>
+
+                    <TextView
+                        android:id="@+id/kitapDetayAlinmaTarTextId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/siyah"
+                        android:gravity="center_horizontal"
+                        android:textSize="14sp"
+                        android:layout_below="@id/kitapDetayYayineviTextId"
+                        android:text="TextView" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/aciklamaRelativeLayoutId"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/detayCardId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/kitapDetayAciklamaTextId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/alegreya"
+                    android:text="TextView"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:id="@+id/viewMoreImageIdLayout"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_marginTop="-30dp"
+                    android:background="@drawable/detay_textview_background"
+                    android:layout_below="@+id/kitapDetayAciklamaTextId"
+                    android:layout_height="30dp">
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/viewMoreImageId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:layout_below="@+id/viewMoreImageIdLayout"
+                    android:src="@drawable/ic_expand_more_gray_24dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/viewLessImageId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/kitapDetayAciklamaTextId"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:background="@drawable/detay_textview_background"
+                    android:src="@drawable/ic_expand_less_black_24dp" />
+
+                <LinearLayout
+                    android:id="@+id/shareLayout"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/viewLessImageId"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/kitapPaylasImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:srcCompat="@drawable/ic_share" />
+
+                    <ImageView
+                        android:id="@+id/kitapBegenImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="48dp"
+                        app:srcCompat="@drawable/ic_favorite" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/yorumlarCardViewId"
+                    android:layout_width="match_parent"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/shareLayout"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/yorumImageId"
+                        android:layout_width="wrap_content"
+                        android:elevation="4dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_comment_gray"/>
+                    <RelativeLayout
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/yorumlarRelativeLayout"
+                        android:background="@drawable/gorus_yorum_layout_round"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/kitapGorusTextViewId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/delius_swash_caps"
+                            android:gravity="left"
+                            android:text="@string/kitapHakkindaGorus"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/expandCollapseYorumlarImageviewId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/kitapGorusTextViewId"
+                            android:layout_alignParentEnd="false"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_expand_more_gray_24dp" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_below="@+id/yorumlarRelativeLayout"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/yorumlarLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/yorumProgressRwId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="right"
+                                android:layout_toRightOf="@+id/yorumProgressRwId">
+
+                                <TextView
+                                    android:id="@+id/puanTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="20dp"
+                                    android:fontFamily="@font/almendra_bold"
+                                    android:textColor="@color/siyah"
+                                    android:textSize="36sp" />
+
+                                <TextView
+                                    android:id="@+id/puanBosTextViewId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="20dp"
+                                    android:fontFamily="@font/almendra_bold"
+                                    android:text="@string/puanlandirilmamisStringValue"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+
+                                <RatingBar
+                                    android:id="@+id/puanRatingBar"
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/puanTextView"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="40dp"
+                                    android:layout_marginRight="20dp"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:progressTint="#FFC107"
+                                    android:stepSize="0.1" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/imageShadow"
+                        android:layout_height="2dp"/>
+
+                        <RelativeLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/puanYorumEkleTextViewId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="@string/puanYorumEkleStr"
+                                android:textColor="@color/siyah"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <RatingBar
+                                android:id="@+id/kisiselPuanRating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/puanYorumEkleTextViewId"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="10dp"
+                                android:numStars="5"
+                                android:progressTint="#FFC107"
+                                android:stepSize="1" />
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/messageTextInputId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_marginTop="10dp"
+                            app:errorEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="vertical"
+                                android:fadeScrollbars="false"
+                                android:layout_weight="1"
+                                android:hint="@string/yorumHint"
+                                android:inputType="textMultiLine"
+                                android:maxLines="4"
+                                android:minLines="1"
+                                android:textColor="@android:color/black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/yorumKaydetButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/kaydetLabel"
+                            android:textColor="@color/whiteTextColor"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_marginTop="15dp"
+                            android:layout_width="match_parent"
+                            android:background="@color/imageShadow"
+                            android:layout_height="2dp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_marginTop="15dp"
+                            android:id="@+id/yorumlarRwId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/yorumYapilmamisTextViewId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:fontFamily="@font/almendra_bold"
+                            android:text="@string/yorumYapilmamisStr"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/imageShadow"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="18sp"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+

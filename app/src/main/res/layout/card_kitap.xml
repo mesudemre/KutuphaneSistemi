@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardLayoutId"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@drawable/card_kitap_border"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/kitapCardImageId"
+            android:layout_width="110dp"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/edit_text_border" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/genelBilgilerRootId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageLayout">
+
+        <RelativeLayout
+            android:id="@+id/genelBilgiler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/kitapCardAdTextId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/siyah"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kitapTurTextId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kitapCardAdTextId"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="TextView"
+                android:textColor="#4E4E4E"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/kitapAciklamaTextId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kitapTurTextId"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="TextView"
+                android:textColor="#515151"
+                android:fontFamily="@font/alegreya"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

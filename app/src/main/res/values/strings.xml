@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">Kütüphane Sistemi</string>
+    <string name="register">KAYIT</string>
+    <string name="login_email_hint">Kullanıcı Adı</string>
+    <string name="login_password_hint">Şifre</string>
+    <string name="signup_login_hint">Hesabınız var mı? Giriş</string>
+    <string name="login_signup_hint">Hesabınız yok mu? Kayıt</string>
+    <string name="evet">Evet</string>
+    <string name="hayir">Hayır</string>
+    <string name="durum">Durum</string>
+    <string name="olusturan">Oluşturan Kullanıcı</string>
+    <string name="kaydetLabel">Kaydet</string>
+    <string name="iptalLabel">İptal</string>
+    <string name="selectTarih">Tarih Seçiniz</string>
+    <string name="ayarlaLabel">Tamam</string>
+    <string name="tarihAyarla">Ayarla</string>
+    <string name="ilgiAlanCombo">İlgi Alanlarınız</string>
+    <string name="araHeaderLabel">Kitap / Yazar Arama...</string>
+
+    <!--LoginActivity -->
+    <string name="bosKullaniciAdiHata">Kullanıcı adı boş geçilemez!</string>
+    <string name="bosSifreHata">Şifre geçilemez!</string>
+    <string name="hataliEpostaFormat">E-Posta formatı hatalı!</string>
+    <string name="hataliLogin">Kullanıcı adı ya da şifre hatalı</string>
+
+    <!--MainActivity -->
+    <string name="hosGeldiniz">Hoşgeldiniz Sn. </string>
+    <string name="resimGetirmeHata">Kullanıcı resmi getirilirken hata meydana geldi!</string>
+    <string name="cikisYapmakIstiyormusunuz">Kütüphane Sisteminden çıkış yapmak istiyor musunuz?</string>
+    <string name="kapatmakIstiyormusunuz">Kütüphane Sistemini kapatmak istiyor musunuz?</string>
+    <string name="hizliErisimMenuLabel">Hızlı Erişim</string>
+    <string name="hizliErisimKitapListeLabel">Kitap Listesi</string>
+    <string name="hizliErisimKitapEklemeLabel">Kitap Ekleme</string>
+    <string name="hizliErisimProfilIslemLabel">Profil İşlemleri</string>
+
+    <!--kutuphane_nav_items.xml -->
+    <string name="anasayfaLabel">Anasayfa</string>
+    <string name="kitapIslemler">Kitap İşlemleri</string>
+    <string name="parametreIslemler">Parametre İşlemler</string>
+    <string name="profilIslemler">Profil İşlemleri</string>
+    <string name="cikisIslem">Çıkış</string>
+
+    <!--parametre_menu_nav_items.xml -->
+    <string name="yayinEvleriItemLabel">Yayınevleri</string>
+    <string name="kitapTurleriItemLabel">Kitap Türleri</string>
+    <string name="paramAciklamaHint"> Açıklamanız...</string>
+    <string name="paramTipSeciniz">Parametre Tipi Seçiniz</string>
+    <string name="paramKitapTur">Kitap Türü</string>
+    <string name="paramYayinevi">Yayınevi</string>
+    <string-array name="parametreTipArr">
+        <item>@string/paramTipSeciniz</item>
+        <item>@string/paramKitapTur</item>
+        <item>@string/paramYayinevi</item>
+    </string-array>
+    <string name="paramEkleDlgTitle">Parametre Ekleme</string>
+    <string name="parametreSecinizUyari">Lütfen bir parametre tipi seçiniz!</string>
+    <string name="aciklamaBosUyari">Açıklama boş geçilemez!</string>
+
+    <!--YayineviListeFragment -->
+    <string name="yayinEviListeHata">Yayınevi listesi getirilirken hata meydana geldi!</string>
+    <string name="yayinEviSilmekIstiyormusunuz">Bu yayınevini silmek istiyor musunuz?</string>
+    <string name="yayinEviSilmeHata">Yayınevi silinirken hata meydana geldi!</string>
+
+    <!--YayineviListeFragment -->
+    <string name="kitapTurListeHata">Kitap türü listesi getirilirken hata meydana geldi!</string>
+    <string name="kitapTurSilmekIstiyormusunuz">Bu kitap türünü silmek istiyor musunuz?</string>
+    <string name="kitapTurSilmeHata">Kitap türü silinirken hata meydana geldi!</string>
+
+    <!--ProfilIslemlerFragment -->
+    <string name="profilKullaniciAdi">Kullanıcı Adı</string>
+    <string name="profilAdSoyad">Ad Soyad</string>
+    <string name="profilEpostaHint">E-Posta</string>
+    <string name="profilAd">Ad</string>
+    <string name="profilSoyad">Soyad</string>
+    <string name="profilDogumTarihi">Doğum Tarihi</string>
+    <string name="kullaniciGuncellemeUyari">Bigilerinizi güncelledikten sonra giriş ekranına yönlendirileceksiniz.Devam etmek istiyor musunuz?</string>
+    <string name="gelismeHabderdarLabel">Son gelişmelerden haberdar olmak istiyor musunuz?</string>
+    <string name="cinsiyetLabel">Cinsiyet</string>
+    <string name="cinsiyetErkekLabel">Erkek</string>
+    <string name="cinsiyetKadinLabel">Kadın</string>
+    <string name="kullaniciGuncellemeHata">Kullanıcı bilgileri güncellenirken hata meydana geldi!</string>
+    <string name="profilResimGuncellemeHata">Profil resmi güncellenirken hata meydana geldi!</string>
+
+    <!--profil_image_degistir.xml -->
+    <string name="itemPhotoCamera">Kamera</string>
+    <string name="itemPhotoLocalStorage">Galeri</string>
+
+    <!--KitapIslemFragment -->
+    <string name="kitapListeHata">Kitap listesi getirilirken hata meydana geldi!</string>
+
+    <!--KitapEklemeActivity -->
+    <string name="kitapEkleActivityTitle">Kitap Ekleme</string>
+    <string name="kitapAdStr">Kitap Adı</string>
+    <string name="yazarAdStr">Yazar Adı</string>
+    <string name="alinmaTarStr">Alınma Tarihi</string>
+    <string name="kitapAciklamaStr">Kitap hakkında kısa bilgi</string>
+    <string name="yayinEviSecinizStr">Yayınevi Seçiniz</string>
+    <string name="kitapTurSecinizStr">Kitap Türü Seçiniz</string>
+    <string name="kitapAdValidErr">Kitap Adı Boş Geçilemez!</string>
+    <string name="yazarAdValidErr">Yazar Adı Boş Geçilemez!</string>
+    <string name="kitapTurValidErr">Lütfen kitap türü seçiniz!</string>
+    <string name="yayinEviValidErr">Lütfen yayınevi seçiniz!</string>
+    <string name="kitapAciklamaValidErr">Kitap hakkında biraz açıklama belirtiniz!</string>
+    <string name="alinmaTarValidErr">Lütfen alınma tarihi seçiniz!</string>
+    <string name="kitapImageValidErr">Lütfen bir kitap resmi ekleyiniz!</string>
+    <string name="kitapKayitHata">Kitap kaydı esnasında hata meydana geldi!</string>
+    <string name="kitapResimYuklemeHata">Kitap resmi yüklenirken hata meydana geldi!</string>
+    <string name="kitapKayitBasarli">Kitap kaydı başarılı</string>
+    <string name="detayLabel"><u>Detay</u></string>
+
+    <!--KitapDetayActivity -->
+    <string name="kitapDetayActivityTitle">Kitap Detayı</string>
+    <string name="kitapHakkindaGorus">Kitap hakkında ki görüşleriniz ve yorumlar</string>
+    <string name="yorumHint">Kitap hakkında ki görüşünüz...</string>
+    <string name="puanlandirilmamisStringValue">Kitaba hiç puan verilmemiş</string>
+    <string name="puanYorumEkleStr">Puan veya yorum ekle</string>
+    <string name="yorumYapilmamisStr">(Kitap hakkında hiç yorum yapılmamış...)</string>
+    <string name="yorumBosErrorStr">Lütfen kitap hakkında ki görüşünüzü giriniz</string>
+    <string name="puanBosErrorStr">Lütfen kitaba puan veriniz</string>
+    <string name="puanKayitHata">Puan kaydı esnasında hata meydana geldi!</string>
+    <string name="yorumKayitHata">Yorum kaydı esnasında hata meydana geldi!</string>
+    <string name="yorumKayitBasarili">Yorumunuz kaydedildi</string>
+
+    <!--ParametreActivity -->
+    <string name="parametreActivityTitle">Parametre İşlemleri</string>
+
+    <!--AnasayfaFragment-->
+    <string name="sonEklenenKitaplarLabel">Son Eklenen Kitaplar</string>
+    <string name="kutuphaneResimAciklama1">Kütüphane Yönetim Sistemine Hoş Geldiniz</string>
+    <string name="kutuphaneResimAciklama2">Kitaplara Göz Atabilir,Kitap Kaydı Yapabilirisinz</string>
+    <string name="kutuphaneResimAciklama3">Kütüphane Yönetim Sistemi</string>
+    <string name="istatistiklerLabel">İstatistikler</string>
+
+    <!--RegisterActivity -->
+    <string name="registerTitle">Kütüphane Sistemi Yeni Kullanıcı</string>
+    <string name="registerKullaniciAdiHata">Lütfen bir kullanıcı adı giriniz</string>
+    <string name="registerSifreHata">Lütfen şifrenizi giriniz</string>
+    <string name="registerAdHata">Lütfen isminizi giriniz</string>
+    <string name="registerSoyadHata">Lütfen soyisminizi giriniz</string>
+    <string name="registerDogumtarihHata">Lütfen doğum tarihinizi giriniz</string>
+    <string name="cinsiyetHata">Lütfen cinsiyetinizi seçiniz</string>
+    <string name="ilgiAlanHata">Lütfen ilgi alanlarından en az bir seçim yapınız</string>
+    <string name="epostaHata">Lütfen e-posta adresinizi giriniz</string>
+    <string name="kullaniciKayitHata">Kayıt esnasında hata meydana geldi!</string>
+    <string name="kullaniciKayitBasarili">Kaydınız başarıyla yapılmıştır.Giriş sayfasına yönlendiriliyorsunuz...</string>
+
+</resources>
