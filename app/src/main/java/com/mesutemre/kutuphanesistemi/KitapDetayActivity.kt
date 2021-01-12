@@ -250,7 +250,7 @@ class KitapDetayActivity : AppCompatActivity() {
                 puanListe = yorumModel.puanListe;
                 yorumListe = yorumModel.yorumListe;
                 val puanAdapter = KitapPuanProgressListeAdapter(applicationContext,puanListe);
-                val yorumAdapter = KitapYorumListeAdapter(applicationContext,yorumListe);
+                val yorumAdapter = KitapYorumListeAdapter(applicationContext,kitapIslemService,pd,kitapId,yorumListe);
 
                 yorumProgressRwId.adapter = puanAdapter;
                 yorumlarRwId.adapter = yorumAdapter;

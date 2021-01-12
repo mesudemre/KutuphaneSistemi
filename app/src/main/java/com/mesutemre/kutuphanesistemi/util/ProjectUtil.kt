@@ -8,11 +8,13 @@ import android.content.Intent
 import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.Drawable
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
+import android.os.StrictMode
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.util.Base64
@@ -359,6 +361,27 @@ class ProjectUtil {
             repeat(decimals) { dotAt *= 10 }
             val roundedValue = (value * dotAt).roundToInt()
             return (roundedValue / dotAt) + (roundedValue % dotAt).toFloat() / dotAt
+        }
+
+        fun loadImageFromUrl(url:String):Drawable?{
+            if (android.os.Build.VERSION.SDK_INT > 9) {
+                val policy = StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+            }
+            var inputStream:InputStream? = null;
+            var resim:Drawable? = null;
+
+            try {
+                inputStream = URL(url).getContent() as InputStream;
+                resim = Drawable.createFromStream(inputStream,"img_"+Date().time);
+                return resim;
+            }catch (e:java.lang.Exception){
+                e.printStackTrace();
+            } finally {
+                inputStream?.close();
+            }
+
+            return null;
         }
     }
 }

@@ -120,6 +120,8 @@
     <string name="puanKayitHata">Puan kaydı esnasında hata meydana geldi!</string>
     <string name="yorumKayitHata">Yorum kaydı esnasında hata meydana geldi!</string>
     <string name="yorumKayitBasarili">Yorumunuz kaydedildi</string>
+    <string name="yorumGuncellemeHata">Yorum kaydı esnasında hata meydana geldi!</string>
+    <string name="yorumSilmeBasarili">Yorumunuz başarıyla silindi</string>
 
     <!--ParametreActivity -->
     <string name="parametreActivityTitle">Parametre İşlemleri</string>
@@ -143,5 +145,9 @@
     <string name="epostaHata">Lütfen e-posta adresinizi giriniz</string>
     <string name="kullaniciKayitHata">Kayıt esnasında hata meydana geldi!</string>
     <string name="kullaniciKayitBasarili">Kaydınız başarıyla yapılmıştır.Giriş sayfasına yönlendiriliyorsunuz...</string>
+    
+    <!--yorum_menu.xml -->
+    <string name="yorumSil">Sil</string>
+    <string name="yorumSilmekİstiyor">Yorumunuzu silmek istiyor musunuz?</string>
 
 </resources>
