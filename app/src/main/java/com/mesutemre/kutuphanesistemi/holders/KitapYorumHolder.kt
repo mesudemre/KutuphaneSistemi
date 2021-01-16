@@ -5,7 +5,6 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textview.MaterialTextView
 import com.mesutemre.kutuphanesistemi.R
-import com.mikhaellopez.circularimageview.CircularImageView
 
 class KitapYorumHolder(view: View): RecyclerView.ViewHolder(view) {
 

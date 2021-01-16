@@ -1,6 +1,7 @@
 package com.mesutemre.kutuphanesistemi.service
 
 import com.mesutemre.kutuphanesistemi.model.KitapModel
+import com.mesutemre.kutuphanesistemi.model.KitapTurIstatistikModel
 import com.mesutemre.kutuphanesistemi.model.ResponseStatusModel
 import com.mesutemre.kutuphanesistemi.model.YorumListeModel
 import okhttp3.MultipartBody
@@ -33,4 +34,8 @@ interface IKitapIslemService {
     @Headers("Content-Type: application/json")
     @GET()
     fun getYorumListe(@Url url:String): Call<YorumListeModel>;
+
+    @Headers("Content-Type: application/json")
+    @GET("api/kitap/tur/istatistik")
+    fun getKitapTurIstatistikListe(): Call<ArrayList<KitapTurIstatistikModel>>;
 }

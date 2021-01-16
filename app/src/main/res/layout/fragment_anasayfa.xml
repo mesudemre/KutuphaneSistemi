@@ -1,71 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <com.smarteist.autoimageslider.SliderView
-        android:id="@+id/imageSlider"
+    style="@style/loginParent">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:sliderAnimationDuration="500"
-        app:sliderAutoCycleDirection="back_and_forth"
-        app:sliderAutoCycleEnabled="true"
-        app:sliderIndicatorAnimationDuration="500"
-        app:sliderIndicatorGravity="center_horizontal|bottom"
-        app:sliderIndicatorMargin="15dp"
-        app:sliderIndicatorOrientation="horizontal"
-        app:sliderIndicatorPadding="3dp"
-        app:sliderIndicatorRadius="2dp"
-        app:sliderIndicatorSelectedColor="#5A5A5A"
-        app:sliderIndicatorUnselectedColor="#FFF"
-        app:sliderScrollTimeInSec="3"
-        app:sliderStartAutoCycle="true" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/kitapTurlerDashboardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:id="@+id/sonEklenenKitaplarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageSlider">
+                <TextView
+                    android:id="@+id/kitapturlerDashboardTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/alegreya"
+                    android:text="@string/dashKitapTurlerLabel"
+                    android:textColor="@color/siyah"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/sonEklenenKitaplarTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="25dp"
-            android:fontFamily="@font/alegreya"
-            android:text="@string/sonEklenenKitaplarLabel"
-            android:textColor="@color/siyah"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dashKitapTurlerRw"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/kitapTurlerDashboardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sonEklenenKitaplar"
-        android:layout_below="@id/sonEklenenKitaplarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:id="@+id/sonEklenenKitaplarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dashKitapTurlerRw">
 
-    <RelativeLayout
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/sonEklenenKitaplar"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/istatistiklerTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="25dp"
-            android:fontFamily="@font/alegreya"
-            android:text="@string/istatistiklerLabel"
-            android:textColor="@color/siyah"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/sonEklenenKitaplarTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/alegreya"
+                    android:text="@string/sonEklenenKitaplarLabel"
+                    android:textColor="@color/siyah"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sonEklenenKitaplar"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/sonEklenenKitaplarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/sonEklenenKitaplar"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/istatistiklerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/alegreya"
+                    android:text="@string/istatistiklerLabel"
+                    android:textColor="@color/siyah"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

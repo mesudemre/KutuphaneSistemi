@@ -295,7 +295,8 @@ class ProfilIslemleriFragment:Fragment() {
 
             override fun onResponse(call: Call<ArrayList<IlgiAlanlariParametreModel>>?, response: Response<ArrayList<IlgiAlanlariParametreModel>>) {
                 ilgiAlanlariListe = response.body() as ArrayList<IlgiAlanlariParametreModel>;
-                ilgiAlanlariListe.add(IlgiAlanlariParametreModel(0,"",ilgiAlanlariListe.get(0).durum,ilgiAlanlariListe.get(0).olusturan));
+                ilgiAlanlariListe.add(IlgiAlanlariParametreModel(0,"",
+                    ilgiAlanlariListe.get(0).durum,ilgiAlanlariListe.get(0).olusturan,ilgiAlanlariListe.get(0).resim));
                 kisiIlgiAlanlar = getKisiIlgiAlanlari(context!!);
                 val ilgiAlanlariListe2 = ilgiAlanlariListe.sortedWith(compareBy({it.id}));
                 ilgiAlanlariListe.clear();

@@ -36,7 +36,6 @@
                     android:textStyle="bold" />
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
-
             <FrameLayout
                 android:id="@+id/fragmentNavTutucu"
                 android:fitsSystemWindows="true"
@@ -44,7 +43,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             </FrameLayout>
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/kitapEkleBtn"
             android:visibility="gone"

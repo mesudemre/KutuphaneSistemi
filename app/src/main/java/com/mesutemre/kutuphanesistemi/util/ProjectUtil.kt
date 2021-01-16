@@ -8,6 +8,7 @@ import android.content.Intent
 import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -382,6 +383,11 @@ class ProjectUtil {
             }
 
             return null;
+        }
+
+        fun generateRandomColorCode():Int {
+            val rnd:Random = Random();
+            return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
         }
     }
 }

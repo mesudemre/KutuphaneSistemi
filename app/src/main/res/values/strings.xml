@@ -132,6 +132,7 @@
     <string name="kutuphaneResimAciklama2">Kitaplara Göz Atabilir,Kitap Kaydı Yapabilirisinz</string>
     <string name="kutuphaneResimAciklama3">Kütüphane Yönetim Sistemi</string>
     <string name="istatistiklerLabel">İstatistikler</string>
+    <string name="dashKitapTurlerLabel">Kitap Türleri</string>
 
     <!--RegisterActivity -->
     <string name="registerTitle">Kütüphane Sistemi Yeni Kullanıcı</string>

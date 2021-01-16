@@ -19,7 +19,11 @@ data class IlgiAlanlariParametreModel(
 
     @SerializedName("olusturan")
     @Expose
-    var olusturan:KullaniciModel
+    var olusturan:KullaniciModel,
+
+    @SerializedName("resim")
+    @Expose
+    var resim:String
 
 ) {
 
